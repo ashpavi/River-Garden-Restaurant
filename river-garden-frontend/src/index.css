@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;600&display=swap');
+
+/* enable smooth scroll without custom classes */
+:root { scroll-behavior: smooth; }
