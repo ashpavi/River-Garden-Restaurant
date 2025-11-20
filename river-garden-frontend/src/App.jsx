@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/header";
 import Hero from "./components/hero";
+import WhyChooseUs from "./components/whyChooseus";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <main> 
         
         <Hero />
+        <WhyChooseUs />
         
       </main>
     </div>

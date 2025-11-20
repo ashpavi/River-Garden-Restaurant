@@ -5,8 +5,8 @@ import { CgProfile } from "react-icons/cg";
 
 export default function Header(){
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
-      <div className=" bg-transparent">
+    <header className="w-full absolute top-0 left-0 z-50">
+      <div className=" bg-transparent shadow-md">
         <Container className="flex items-center justify-between py-4">
 
           {/* Logo */}

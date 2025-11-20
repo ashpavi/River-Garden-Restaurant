@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Button from "./ui/buttons";
 import Container from "./ui/container";
+import { FaRegClock } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 const IMAGES = [
   "/images/frame1.png",
@@ -23,7 +25,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-[85vh] min-h-[560px] w-full overflow-hidden"
+      className="relative h-[100vh] min-h-[560px] w-full overflow-hidden"
     >
       {/* Background carousel */}
       <div className="absolute inset-0">
@@ -40,34 +42,43 @@ export default function Hero() {
         ))}
 
         {/* dark overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       {/* Content */}
-      <Container className="relative z-20 pt-20 h-full flex flex-col justify-center items-start text-white">
-        <p className="mb-3 text-sm tracking-widest">
-          - Welcome to our restaurants -
+      <Container className="relative z-20 pt-20 h-full flex flex-col justify-center items-center text-white text-center">
+
+        <p className="mb-3 text-md tracking-widest">
+            - Welcome to our restaurants -
         </p>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight max-w-4xl">
-          Your Perfect Spot for Food, Fun,<br /> and BYOB by the River
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight max-w-5xl">
+            Your Perfect Spot for Food, Fun,
+            <br />
+            and BYOB by the River
         </h1>
 
-        <p className="mt-4 text-lg max-w-2xl">
-          Enjoy your favorite dishes in our restaurants!
+        <p className="mt-6 text-2xl max-w-3xl">
+            Enjoy your favorite dishes in our restaurants!
         </p>
 
         {/* Time & Location */}
-        <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <div className="flex gap-3">
-            <span className="bg-white/10 px-4 py-2 rounded-md text-sm">
-              ⏰ 10:00AM - 10:00PM
+        <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
+        <div className="flex gap-6">
+            
+            <span className="bg-white/10 px-4 py-2 rounded-md text-sm flex items-center gap-2">
+            <FaRegClock className="text-[#ff7a42]" />
+            10:00AM - 10:00PM
             </span>
-            <span className="bg-white/10 px-4 py-2 rounded-md text-sm">
-              📍 Ambalantota
+
+            <span className="bg-white/10 px-4 py-2 rounded-md text-sm flex items-center gap-2">
+            <FaLocationDot className="text-[#ff7a42]" />
+            Ambalantota
             </span>
-          </div>
+
         </div>
+        </div>
+
 
         {/* Buttons */}
         <div className="mt-8 flex items-center gap-4">
@@ -84,5 +95,5 @@ export default function Hero() {
         </div>
       </Container>
     </section>
-  );
+  )
 }
