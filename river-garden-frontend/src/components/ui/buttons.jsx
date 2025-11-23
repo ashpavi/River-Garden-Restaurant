@@ -1,6 +1,7 @@
 export default function Button({ children, type = "primary", className = "", ...rest }) {
   const base =
-    "inline-flex items-center justify-center font-semibold rounded-full px-5 py-2.5 transition-all";
+    "inline-flex items-center justify-center font-semibold px-5 py-2.5 transition-all cursor-pointer " +
+    "rounded-tr-full rounded-br-full rounded-bl-full rounded-tl-none";
 
   let styles = "";
 

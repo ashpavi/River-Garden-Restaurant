@@ -3,6 +3,7 @@ import Button from "./ui/buttons";
 import Container from "./ui/container";
 
 
+
 const TextCard = ({ title, desc }) => (
   <div className="flex flex-col items-center text-center p-6">
     <h3 className="font-serif text-xl md:text-2xl mb-3">{title}</h3>
