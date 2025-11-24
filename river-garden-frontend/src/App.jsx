@@ -12,10 +12,10 @@ import CommentsCarousel from "./components/comments";
 export default function App() {
   return (
     <div className="w-full h-full">
-      {/* Fixed Header */}
+      
       <Header />
 
-      {/* Main Sections */}
+
       <main> 
         <ScrollToTop />        
         <Hero />

@@ -20,7 +20,7 @@ export default function AboutUS() {
                 />
               </div>
 
-              {/* subtle outer border to mimic the Figma look */}
+              
               <div className="absolute -inset-1 rounded-xl pointer-events-none" />
             </div>
           </div>

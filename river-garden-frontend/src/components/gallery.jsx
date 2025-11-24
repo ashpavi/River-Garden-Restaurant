@@ -83,7 +83,7 @@ export default function Gallery({
   return (
     <section id="gallery" className="py-[-1] bg-white">
       <Container>
-        {/* tightened heading spacing */}
+        
         <div className="text-center mb-14 md:mb-18 pt-8">
           <p className="text-sm tracking-widest text-gray-700">- GALLERY -</p>
           <h2 className="text-3xl md:text-4xl font-serif mt-2 font-semibold">
@@ -94,7 +94,7 @@ export default function Gallery({
           </p>
         </div>
 
-        {/* Pull carousel up with negative margin so it visually overlaps the heading area neatly */}
+        
         <div
           className="relative flex items-center justify-center -mt-6 md:-m-10"
           onMouseEnter={() => setIsPaused(true)}
@@ -103,7 +103,7 @@ export default function Gallery({
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {/* left arrow (vertically centered) */}
+          {/* left arrow */}
           <button
             onClick={prev}
             aria-label="Previous"
@@ -120,8 +120,8 @@ export default function Gallery({
               const absDist = Math.abs(dist);
               if (absDist > visibleCount) return null;
 
-              // center the card at true center using translate(-50%, -50%), then move horizontally
-              const offsetPercent = -dist * spacing; // positive -> right, negative -> left
+              
+              const offsetPercent = -dist * spacing; 
               const translateY = dist === 0 ? "-4%" : "6%";
               const scale = Math.max(0.75, 1 - absDist * scaleFalloff);
               const zIndex = 100 - absDist * 10;
@@ -164,7 +164,7 @@ export default function Gallery({
           </button>
         </div>
 
-        {/* small bottom spacing so next section isn't glued */}
+        
         <div className="h-8 md:h-12" />
       </Container>
     </section>

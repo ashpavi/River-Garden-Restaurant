@@ -10,7 +10,7 @@ export default function Catering() {
           {/* LEFT: framed image */}
           <div className="flex justify-center md:justify-start">
             <div className="rounded-xl bg-white shadow-[0_18px_40px_rgba(0,0,0,0.12)] p-3">
-              {/* preview image (replace with /images/your-catering.jpg later) */}
+              
               <img
                 src="/images/catering.jpg"
                 alt="Catering preview"
@@ -42,7 +42,7 @@ export default function Catering() {
             <div className="space-y-6 mb-6">
               <div className="flex items-start gap-4">
                 <div className="flex-none w-12 h-12 rounded-full bg-[#fff6f1] flex items-center justify-center shadow-sm">
-                  {/* replace /images/anniversary.png with your PNG file */}
+                  
                   <img src="/images/anniversary.png" alt="Anniversary" className="w-6 h-6 object-contain" />
                 </div>
                 <div>
@@ -56,7 +56,7 @@ export default function Catering() {
 
               <div className="flex items-start gap-4">
                 <div className="flex-none w-12 h-12 rounded-full bg-[#fff6f1] flex items-center justify-center shadow-sm">
-                  {/* replace /images/university.png with your PNG file */}
+                  
                   <img src="/images/university.png" alt="University Celebrations" className="w-6 h-6 object-contain" />
                 </div>
                 <div>
@@ -69,7 +69,7 @@ export default function Catering() {
 
               <div className="flex items-start gap-4">
                 <div className="flex-none w-12 h-12 rounded-full bg-[#fff6f1] flex items-center justify-center shadow-sm">
-                  {/* replace /images/birthday.png with your PNG file */}
+                  
                   <img src="/images/birthday.png" alt="Birthdays" className="w-6 h-6 object-contain" />
                 </div>
                 <div>
