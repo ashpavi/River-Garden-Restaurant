@@ -4,8 +4,10 @@ import Hero from "./components/hero";
 import WhyChooseUs from "./components/whyChooseus";
 import ScrollToTop from "./components/ui/scrollToTop";
 import AboutUS from "./components/aboutUs";
-import MenuCarousel from "./components/menuCarousel";
 import Catering from "./components/catering";
+import Offers from "./components/offers";
+import Gallery from "./components/gallery";
+import CommentsCarousel from "./components/comments";
 
 export default function App() {
   return (
@@ -19,8 +21,10 @@ export default function App() {
         <Hero />
         <WhyChooseUs />
         <AboutUS />
-        <MenuCarousel />
+        <Gallery />
         <Catering />
+        <Offers />
+        <CommentsCarousel/>
 
         
       </main>

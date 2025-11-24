@@ -12,7 +12,7 @@ export default function Button({ children, type = "primary", className = "", ...
 
   if (type === "outline") {
     styles =
-      "border border-[#ff7a42] text-[#ff7a42] bg-white hover:bg-[#ff7a420a]";
+      "border border-[#ff7a42] text-[#ff7a42] bg-white hover:bg-[#ff7a420a] ";
   }
 
   if (type === "ghost") {

@@ -27,7 +27,7 @@ export default function AboutUS() {
 
           {/* RIGHT: text content */}
           <div className="px-4 md:px-0">
-            <p className="text-sm text-gray-500 tracking-widest mb-3">- ABOUT US -</p>
+            <p className="text-sm text-gray-700 tracking-widest mb-3">- ABOUT US -</p>
 
             <h2 className="text-3xl md:text-4xl font-serif font-semibold leading-snug mb-4">
               Experience Nature, Flavor, and Memories by the Walawa River

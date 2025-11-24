@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
   return (
     <Container className="py-10">
       <div className="text-center mb-10">
-        <p className="text-sm tracking-widest">- WHAT TO EXCEPT -</p>
+        <p className="text-sm text-gray-700 tracking-widest">- WHAT TO EXCEPT -</p>
         <h2 className="text-3xl md:text-4xl font-serif mt-2">Why Choose Us?</h2>
         <p className="text-gray-500 mt-2">Where Quality, Taste, and Service Meet</p>
       </div>

@@ -30,7 +30,7 @@ export default function Header(){
             <a href="#home" className="text-[#ff7a42] font-medium">Home</a>
             <a href="#aboutUs" className="hover:text-[#ff7a42]">About Us</a>
             <a href="#gallery" className="hover:text-[#ff7a42]">Menu</a>
-            <a href="#catering" className="hover:text-[#ff7a42]">Offers</a>
+            <a href="#offers" className="hover:text-[#ff7a42]">Offers</a>
             <a href="#contact" className="hover:text-[#ff7a42]">Contact</a>
           </nav>
 

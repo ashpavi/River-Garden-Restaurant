@@ -25,11 +25,12 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-[100vh] min-h-[560px] w-full overflow-hidden"
+      className="relative h-screen min-h-[560px] w-full overflow-hidden"
     >
       {/* Background carousel */}
       <div className="absolute inset-0">
         {IMAGES.map((src, i) => (
+          
           <img
             key={i}
             src={src}
