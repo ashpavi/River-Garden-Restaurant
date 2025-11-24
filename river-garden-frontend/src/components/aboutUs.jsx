@@ -12,11 +12,11 @@ export default function AboutUS() {
           <div className="flex justify-center md:justify-start">
             <div className="relative">
               {/* white frame */}
-              <div className="rounded-xl bg-gray-300 shadow-2xl  p-3">
+              <div className="rounded-xl bg-gray-100 shadow-2xl p-3">
                 <img
                   src="/images/aboutUs.png"
                   alt="River garden about"
-                  className="w-[300px] md:w-[360px] lg:w-[420px] h-[400px] md:h-[450px] lg:h-[500px] object-cover rounded-lg"
+                  className="w-[300px] md:w-[400px] lg:w-[460px] h-[450px] md:h-[550px] lg:h-[600px] object-cover rounded-lg"
                 />
               </div>
 
@@ -33,14 +33,28 @@ export default function AboutUS() {
               Experience Nature, Flavor, and Memories by the Walawa River
             </h2>
 
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 max-w-[60ch]">
-              River Garden Restaurant, nestled by the serene Walawa River,
-              offers more than dining — it's an experience. Enjoy fresh local
-              and international dishes, scenic views, and peaceful moments.
-              Perfect for lunch, romantic dinners, boat rides, or events.{' '}
-              <strong>BYOB is welcome.</strong> Create lasting memories with
-              nature, food, and warm hospitality.
-            </p>
+            {/* Provided copy split into readable paragraphs */}
+            <div className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 max-w-[60ch]">
+              <p className="mb-4">
+                Nestled by the peaceful Walawa River, River Garden Restaurant offers more than a meal — it’s a memorable experience. 
+                Ideal for nature lovers and food enthusiasts, our space blends scenic beauty with rich flavors.
+              </p>
+
+              <p className="mb-4">
+                We serve a diverse range of local and international dishes, freshly prepared for every guest. 
+                Whether it’s a relaxed lunch, a romantic dinner, or a fun boat ride, every visit brings something special.
+              </p>
+
+              <p className="mb-4">
+                Our venue is perfect for private parties, corporate events, day-outs, and family gatherings. 
+                Guests are also welcome to bring their own bottle (BYOB).
+              </p>
+
+              <p>
+                At River Garden, we create warm, memorable moments through great food, nature, and genuine hospitality. 
+                Enjoy your time by the river — where every meal comes with a view and a smile.
+              </p>
+            </div>
 
             <div>
               <Button type="primary" className="px-6 py-3">
