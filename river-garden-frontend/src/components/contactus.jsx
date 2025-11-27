@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Send } from 'lucide-react';
+import React from 'react';
+import Button from './ui/buttons';
 
 export default function RestaurantTestimonials() {
   const [formData, setFormData] = useState({
@@ -28,7 +30,8 @@ export default function RestaurantTestimonials() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-orange-50 to-white py-8 px-4 sm:px-6 lg:px-8">
+    <section id="contactus">
+    <div className="bg-linear-to-b from-orange-50 to-white py-8 px-4 sm:px-6 lg:px-8">
       {/* Contact Section */}
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-20">
@@ -51,7 +54,7 @@ export default function RestaurantTestimonials() {
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                  Enter your Phn.no :
+                  Enter your Phone no. :
                 </label>
                 <input
                   type="tel"
@@ -78,10 +81,10 @@ export default function RestaurantTestimonials() {
                   />
                   <button
                     onClick={handleSubmit}
-                    className="absolute bottom-2 right-0 bg-orange-500 text-white p-2 rounded hover:bg-orange transition-colors"
+                    className="absolute  bottom-1 right-0 bg-[#ff7a42] text-white p-2 rounded hover:bg-[#e66a2e] transition-colors"
                     aria-label="Send message"
                   >
-                    <Send size={20} width={50} height={51}/>
+                    <Send size={13} width={35} height={36}/>
                   </button>
                 </div>
               </div>
@@ -140,26 +143,16 @@ export default function RestaurantTestimonials() {
                 <p className="text-lg text-gray-900">9.00 - 20.00</p>
               </div>
 
-              <button 
-                onClick={() => alert('Connecting you with our team...')}
-                className="bg-orange-500 text-white text-lg font-medium hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl"
-                style={{
-                  width: '501px',
-                  height: '86px',
-                  top: '1608px',
-                  left: '835px',
-                  borderTopLeftRadius: '5px',
-                  borderTopRightRadius: '40px',
-                  borderBottomRightRadius: '40px',
-                  borderBottomLeftRadius: '40px'
-                }}
-              >
+              <div>
+              <Button type="primary" className="px-6 py-3 ml-10 mt-5">
                 Connect with our team
-              </button>
+              </Button>
+            </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </section>
   );
 }

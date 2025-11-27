@@ -81,9 +81,9 @@ export default function CommentsCarousel({
           <h2 
             style={{
               fontFamily: 'Lora',
-              fontWeight: 400,
+              fontWeight: 'bold',
               fontStyle: 'normal',
-              fontSize: '85px',
+              fontSize: '50px',
               lineHeight: '100%',
               letterSpacing: '0%',
               textAlign: 'center',
