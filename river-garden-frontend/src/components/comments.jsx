@@ -73,16 +73,27 @@ export default function CommentsCarousel({
   }
 
   return (
-    <section id="comments" className="py-16 bg-white">
+    <section id="comments" className="py-16 pt-32 bg-white">
       <Container>
         {/* Heading */}
         <div className="text-center mb-10">
           <p className="text-sm tracking-widest text-gray-700">- COMMENTS -</p>
-          <h2 className="text-3xl md:text-4xl font-serif mt-2 font-semibold">
+          <h2 
+            style={{
+              fontFamily: 'Lora',
+              fontWeight: 400,
+              fontStyle: 'normal',
+              fontSize: '85px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle'
+            }}
+          >
             What customers say?
           </h2>
           <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-            Our guests are the heart of everything we do. Hear what they have to say.
+            Our guests are the heart of everything we do. Hear what they have to say about their dining experiences, from the taste of our dishes to the warmth of our service.
           </p>
         </div>
 
