@@ -31,7 +31,7 @@ export default function Header(){
             <a href="#aboutUs" className="hover:text-[#ff7a42]">About Us</a>
             <a href="#gallery" className="hover:text-[#ff7a42]">Menu</a>
             <a href="#offers" className="hover:text-[#ff7a42]">Offers & Discounts</a>
-            <a href="#contact" className="hover:text-[#ff7a42]">Contact</a>
+            <a href="#contactus" className="hover:text-[#ff7a42]">Contact</a>
           </nav>
 
           {/* Icons */}
