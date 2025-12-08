@@ -8,7 +8,8 @@ import Catering from "./components/catering";
 import Offers from "./components/offers";
 import Gallery from "./components/gallery";
 import CommentsCarousel from "./components/comments";
-
+import Contactus from "./components/contactus";
+import RestaurantFooter from "./components/footer";
 export default function App() {
   return (
     <div className="w-full h-full">
@@ -25,6 +26,8 @@ export default function App() {
         <Catering />
         <Offers />
         <CommentsCarousel/>
+        <Contactus/>
+        <RestaurantFooter />
 
         
       </main>

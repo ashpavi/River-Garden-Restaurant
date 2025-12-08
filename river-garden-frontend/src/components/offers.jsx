@@ -6,7 +6,7 @@ export default function Offers() {
   return (
     <section
       id="offers"
-      className="py-16 bg-[#ff8b5a] bg-opacity-80 relative overflow-hidden"
+      className="py-16 pb-32 bg-[#ff8b5a] bg-opacity-80 relative overflow-hidden"
     >
       {/* Background pattern overlay */}
       <div className="absolute inset-0 opacity-5 bg-[url('/images/offers.jpg')] bg-cover bg-center"></div>
