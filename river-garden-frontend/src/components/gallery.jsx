@@ -85,7 +85,7 @@ export default function Gallery({
       <Container>
         
         <div className="text-center mb-14 md:mb-18 pt-8">
-          <p className="text-sm tracking-widest text-gray-700">- GALLERY -</p>
+          <p className="text-md tracking-widest text-gray-700">- GALLERY -</p>
           <h2 className="text-3xl md:text-4xl font-serif mt-2 font-semibold">
             Explore Our Beautiful Atmosphere
           </h2>
@@ -107,10 +107,10 @@ export default function Gallery({
           <button
             onClick={prev}
             aria-label="Previous"
-            className="absolute left-3 md:left-6 z-50 p-3 rounded-full bg-white/95 hover:bg-white shadow-lg"
+            className="absolute left-3 md:left-6 z-50 p-3 "
             style={{ top: "50%", transform: "translateY(-50%)" }}
           >
-            <FaChevronLeft className="text-gray-700" />
+            <FaChevronLeft className="text-gray-500 text-4xl" />
           </button>
 
           {/* cards wrapper */}
@@ -157,10 +157,10 @@ export default function Gallery({
           <button
             onClick={next}
             aria-label="Next"
-            className="absolute right-3 md:right-6 z-50 p-3 rounded-full bg-white/95 hover:bg-white shadow-lg"
+            className="absolute right-3 md:right-6 z-50 p-3"
             style={{ top: "50%", transform: "translateY(-50%)" }}
           >
-            <FaChevronRight className="text-gray-700" />
+            <FaChevronRight className="text-gray-500 text-4xl" />
           </button>
         </div>
 

@@ -2,66 +2,103 @@ import React from "react";
 import Button from "./ui/buttons";
 import Container from "./ui/container";
 
-
-
 export default function AboutUS() {
   return (
-    <section id="aboutUs" className="py-16 bg-white">
+    <section id="aboutUs" className="py-20 bg-white overflow-hidden">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* LEFT: framed image with decorative background */}
-          <div className="flex justify-center md:justify-start relative">
-            
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+          {/* LEFT COLUMN (image + background pattern ONLY) */}
+          <div className="relative flex justify-center md:justify-start">
+
+            {/* SINGLE background image (behind photo ONLY) */}
             <div
-              className="hidden md:block absolute -left-10 top-4 w-44 h-[420px] rounded-lg pointer-events-none"
+              className="
+                hidden md:block
+                absolute
+                -left-16
+                top-1/2
+                -translate-y-1/2
+                w-[110%]
+                h-[480px]
+                opacity-60
+                pointer-events-none
+                z-0
+              "
               style={{
-                backgroundImage: `url('/images/offers.jpg')`,
+                backgroundImage: "url('/images/offers.jpg')",
+                backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
-                backgroundPosition: "center",
-                opacity: 0.12,
-                transform: "rotate(-2deg)",
+                backgroundPosition: "left center",
               }}
               aria-hidden="true"
             />
 
-            {/* outer white frame & shadow */}
-            <div className="relative rounded-xl bg-white p-4 shadow-[0_18px_40px_rgba(0,0,0,0.12)]">
-              {/* inner inset white border */}
-              <div className="bg-white rounded-lg p-1.5">
-                <img
-                  src="/images/aboutUs.png"
-                  alt="Family by the Walawa River — River Garden"
-                  className="block w-[300px] md:w-[400px] lg:w-[460px] h-[420px] md:h-[520px] lg:h-[600px] object-cover rounded-md"
-                />
-              </div>
+            {/* Photo card */}
+            <div className="relative z-10 bg-white p-3 rounded-xl shadow-[0_12px_30px_rgba(0,0,0,0.15)]">
+              <img
+                src="/images/aboutUs.png"
+                alt="Family by the Walawa River — River Garden"
+                className="
+                  w-[300px]
+                  md:w-[400px]
+                  lg:w-[460px]
+                  h-[420px]
+                  md:h-[520px]
+                  lg:h-[600px]
+                  object-cover
+                  rounded-lg
+                "
+              />
             </div>
-
-            {/* subtle outer border (for effect) */}
-            <div className="absolute -inset-1 rounded-xl pointer-events-none" />
           </div>
 
-          {/* RIGHT: text content (Figma copy) */}
+          {/* RIGHT COLUMN (text ONLY, clean white background) */}
           <div className="px-2 md:px-0">
-            <p className="text-sm text-gray-700 tracking-widest mb-3">- ABOUT US -</p>
+            <p className="text-md text-gray-700 tracking-widest mb-4">
+              - ABOUT US -
+            </p>
 
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold leading-snug mb-4">
+            <h2
+              className="
+                text-3xl
+                md:text-4xl
+                font-serif
+                font-semibold
+                leading-tight
+                mb-6
+                max-w-[17ch]
+              "
+            >
               Experience Nature, Flavor, and Memories by the Walawa River
             </h2>
 
-            <div className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 max-w-[60ch]">
-              <p className="mb-4">
-                River Garden Restaurant, nestled by the serene Walawa River, offers more than dining — it’s an experience. 
-                Enjoy fresh local and international dishes, scenic views, and peaceful moments. Perfect for lunch, romantic dinners, boat rides, or events. 
-                BYOB is welcome. Create lasting memories with nature, food, and warm hospitality.
-              </p>
-            </div>
+            <p
+              className="
+                text-gray-700
+                text-base
+                md:text-xl
+                leading-relaxed
+                mb-8
+                max-w-[50ch]
+              "
+            >
+              River Garden Restaurant, nestled by the serene Walawa River,
+              offers more than dining — it’s an experience. Enjoy fresh local
+              and international dishes, scenic views, and peaceful moments.
+              Perfect for lunch, romantic dinners, boat rides, or events.
+              BYOB is welcome. Create lasting memories with nature, food,
+              and warm hospitality.
+            </p>
 
-            <div>
-              <Button type="primary" className="px-6 py-3">
-                Learn more
-              </Button>
-            </div>
+            <Button
+              type="primary"
+              className="px-10 py-3 rounded-full text-base"
+            >
+              Learn more
+            </Button>
           </div>
+
         </div>
       </Container>
     </section>

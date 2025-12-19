@@ -3,6 +3,7 @@ import Button from "./ui/buttons";
 import Container from "./ui/container";
 import { FaRegClock } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 const IMAGES = [
   "/images/frame1.png",
@@ -82,16 +83,19 @@ export default function Hero() {
 
 
         {/* Buttons */}
-        <div className="mt-8 flex items-center gap-4">
-          <Button type="primary" className="text-lg px-7 py-3">
+        <div className="mt-8 flex items-center gap-5">
+          <button className="
+            px-13 py-4 rounded-2xl border-3 border-[#ff7a42] text-[#ff7a42] text-xl font-serif bg-transparent  
+            transition-colors duration-200 hover:backdrop-blur-sm  ">
             Book Table
-          </Button>
+          </button>
+
 
           <a
             href="tel:+94762356980"
-            className="text-white/90 text-lg font-medium"
+            className="text-white/90 text-lg font-medium flex"
           >
-            📞 +94 76 235 6980
+            <BsFillTelephoneFill className="text-white text-3xl pr-1.5" /> +94 76 235 6980
           </a>
         </div>
       </Container>

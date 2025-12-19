@@ -1,36 +1,19 @@
-import React from "react";
-import Header from "./components/header";
-import Hero from "./components/hero";
-import WhyChooseUs from "./components/whyChooseus";
-import ScrollToTop from "./components/ui/scrollToTop";
-import AboutUS from "./components/aboutUs";
-import Catering from "./components/catering";
-import Offers from "./components/offers";
-import Gallery from "./components/gallery";
-import CommentsCarousel from "./components/comments";
-import Contactus from "./components/contactus";
-import RestaurantFooter from "./components/footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/home";
+import Login from "./pages/login";
+import LearnMore from "./pages/learnMore";
+import ReadMore from "./pages/readMore";
+
 export default function App() {
   return (
-    <div className="w-full h-full">
-      
-      <Header />
-
-
-      <main> 
-        <ScrollToTop />        
-        <Hero />
-        <WhyChooseUs />
-        <AboutUS />
-        <Gallery />
-        <Catering />
-        <Offers />
-        <CommentsCarousel/>
-        <Contactus/>
-        <RestaurantFooter />
-
-        
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/why-choose" element={<LearnMore />} />
+        <Route path="/offers-page" element={<ReadMore />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

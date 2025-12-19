@@ -1,20 +1,28 @@
 import React from "react";
 import Button from "./ui/buttons";
 import Container from "./ui/container";
+import { useNavigate } from "react-router-dom";
 
+const TextCard = ({ title, desc, anchor }) => {
+  const navigate = useNavigate();
 
-
-const TextCard = ({ title, desc }) => (
-  <div className="flex flex-col items-center text-center p-6">
-    <h3 className="font-serif text-xl md:text-2xl mb-3">{title}</h3>
-    <p className="text-gray-600 text-sm md:text-base max-w-[320px]">{desc}</p>
-    <div className="mt-6">
-      <Button type="primary" className="px-5 py-2">
-        Learn more
-      </Button>
+  return (
+    <div className="flex flex-col items-center text-center p-6">
+      <h3 className="font-serif text-xl md:text-2xl mb-3">{title}</h3>
+      <p className="text-gray-600 text-sm md:text-base max-w-[320px]">{desc}</p>
+      <div className="mt-6">
+        <Button
+          type="primary"
+          className="px-5 py-2"
+          onClick={() => navigate(`/why-choose#${anchor}`)}
+        >
+          Learn more
+        </Button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
+
 
 const ImgCard = ({ src, alt }) => (
   <div className="overflow-hidden rounded-md shadow-sm">
@@ -26,7 +34,7 @@ export default function WhyChooseUs() {
   return (
     <Container className="py-10">
       <div className="text-center mb-10">
-        <p className="text-sm text-gray-700 tracking-widest">- WHAT TO EXCEPT -</p>
+        <p className="text-md text-gray-700 tracking-widest">- WHAT TO EXCEPT -</p>
         <h2 className="text-3xl md:text-4xl font-serif mt-2">Why Choose Us?</h2>
         <p className="text-gray-500 mt-2">Where Quality, Taste, and Service Meet</p>
       </div>
@@ -38,6 +46,7 @@ export default function WhyChooseUs() {
           <TextCard
             title="Beautiful Riverside Ambience"
             desc="Enjoy peaceful dining by the scenic Walawa River, your perfect escape from city life"
+            anchor="ambience"
           />
         </div>
 
@@ -49,6 +58,7 @@ export default function WhyChooseUs() {
           <TextCard
             title="Delicious Food Made with Fresh Ingredients"
             desc="Savor dishes crafted with fresh local produce, blending Sri Lankan tradition with modern flavor"
+            anchor="food"
           />
         </div>
 
@@ -64,7 +74,11 @@ export default function WhyChooseUs() {
               Perfect for any occasion, from parties to corporate events, with spacious indoor and garden settings
             </p>
             <div className="mt-6">
-              <Button type="primary" className="px-5 py-2">
+              <Button
+                type="primary"
+                className="px-5 py-2"
+                onClick={() => navigate("/why-choose#occasions")}
+              >
                 Learn more
               </Button>
             </div>
@@ -80,6 +94,7 @@ export default function WhyChooseUs() {
           <TextCard
             title="Boat Rides & Riverside Fun"
             desc="Enhance your visit with a relaxing boat ride on the Walawa River, a one of a kind Ambalantota experience"
+            anchor="boating"
           />
         </div>
 
@@ -91,6 +106,7 @@ export default function WhyChooseUs() {
           <TextCard
             title="BYOB & Relaxed Atmosphere"
             desc="BYOB and relax in a cozy, welcoming space, where good food meets great company"
+            anchor="byob"
           />
         </div>
       </div>

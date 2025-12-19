@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./ui/container";
 import Button from "./ui/buttons";
+import { useNavigate } from "react-router-dom";
 
 export default function Offers() {
   return (
@@ -14,7 +15,7 @@ export default function Offers() {
       <Container>
         {/* Heading */}
         <div className="relative text-center mb-12">
-          <p className="text-sm tracking-widest text-gray-700">- OFFERS -</p>
+          <p className="text-md tracking-widest text-gray-700">- OFFERS -</p>
 
           <h2 className="text-3xl md:text-4xl font-serif font-semibold mt-2">
             Special Offers and Discounts
@@ -52,40 +53,38 @@ export default function Offers() {
 
 /* SMALL OFFER CARD COMPONENT */
 function OfferCard({ title, description }) {
-  return (
+  const navigate = useNavigate();
 
+  return (
     <div className="relative bg-white rounded-2xl p-6 shadow-xl border border-orange-200 flex flex-col justify-between">
-        <div className="absolute inset-0 opacity-20 bg-[url('/images/offers.jpg')] bg-cover bg-center"></div>
-      {/* Label + hot icon */}
-      <div>
+      <div className="absolute inset-0 opacity-20 bg-[url('/images/offers.jpg')] bg-cover bg-center"></div>
+
+      <div className="relative z-10">
         <div className="flex items-center justify-between">
           <p className="text-gray-700 font-medium italic text-sm">
             Special Offer
           </p>
-
           <img
-            src="/images/hotoffer.png" 
+            src="/images/hotoffer.png"
             alt="Hot Offer"
             className="w-10 h-10 object-contain"
           />
         </div>
 
-        {/* Title */}
         <h3 className="text-xl font-serif font-semibold mt-4 text-gray-900">
           {title}
         </h3>
 
-        {/* Description */}
         <p className="text-gray-600 text-sm leading-relaxed mt-3">
           {description}
         </p>
       </div>
 
-      {/* CTA button */}
-      <div className="mt-6">
+      <div className="mt-6 relative z-10">
         <Button
           type="outline"
           className="w-full justify-center py-2 font-medium bg-white hover:bg-amber-500 rounded-full"
+          onClick={() => navigate("/offers-page")}
         >
           Read More
         </Button>
@@ -93,3 +92,4 @@ function OfferCard({ title, description }) {
     </div>
   );
 }
+

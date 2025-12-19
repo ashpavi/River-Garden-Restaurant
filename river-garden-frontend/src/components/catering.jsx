@@ -21,7 +21,7 @@ export default function Catering() {
 
           {/* RIGHT: text and features */}
           <div className="px-2 md:px-6">
-            <p className="text-sm text-gray-500 tracking-widest mb-3">- CATERING -</p>
+            <p className="text-md text-gray-500 tracking-widest mb-3">- CATERING -</p>
 
             <h3 className="text-2xl md:text-3xl font-serif font-semibold mb-4">
               Delicious Catering for Any Occasion

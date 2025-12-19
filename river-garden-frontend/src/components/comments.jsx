@@ -77,7 +77,7 @@ export default function CommentsCarousel({
       <Container>
         {/* Heading */}
         <div className="text-center mb-10">
-          <p className="text-sm tracking-widest text-gray-700">- COMMENTS -</p>
+          <p className="text-md tracking-widest text-gray-700">- COMMENTS -</p>
           <h2 
             style={{
               fontFamily: 'Lora',
@@ -140,16 +140,16 @@ export default function CommentsCarousel({
           {/* ARROWS */}
           <button
             onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow p-3 rounded-full"
+            className="absolute left-4 top-1/2 -translate-y-1/2  p-3 "
           >
-            <FaChevronLeft className="text-gray-700" />
+            <FaChevronLeft className="text-gray-500 text-2xl" />
           </button>
 
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow p-3 rounded-full"
+            className="absolute right-4 top-1/2 -translate-y-1/2  p-3 "
           >
-            <FaChevronRight className="text-gray-700" />
+            <FaChevronRight className="text-gray-500 text-2xl" />
           </button>
         </div>
       </Container>
