@@ -1,12 +1,21 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function ReadMore() {
   const navigate = useNavigate();
+  const location = useLocation();
 
+  // Handle hash scrolling
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+    }
+    window.scrollTo({ top: 0 });
+  }, [location]);
 
   return (
     <div className="min-h-screen bg-[#fffaf6] py-24 px-4">
@@ -19,16 +28,19 @@ export default function ReadMore() {
             Special Offers at River Garden
           </h1>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Enjoy exclusive dining offers crafted to give you the best flavors
-            and unforgettable experiences by the Walawa River.
+            Enjoy exclusive dining offers crafted to give you unforgettable
+            experiences by the Walawa River.
           </p>
         </div>
 
-        {/* Offers List */}
-        <div className="space-y-16">
+        {/* Offers */}
+        <div className="space-y-20">
 
           {/* Offer 1 */}
-          <section className="grid md:grid-cols-2 gap-10 items-center">
+          <section
+            id="weekday"
+            className="grid md:grid-cols-2 gap-10 items-center"
+          >
             <img
               src="/images/offers.jpg"
               alt="Weekday Offer"
@@ -39,32 +51,30 @@ export default function ReadMore() {
                 Weekday Dinners 1+1=3
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Reserve your table at River Garden on any weekday from 12 pm to
-                3 pm and enjoy a special-priced 3-course dinner crafted just for
-                you. Perfect for lunch breaks, casual meetups, and relaxed
-                afternoons.
+                Reserve your table on weekdays from 12 pm to 3 pm and enjoy a
+                special-priced 3-course dinner — perfect for relaxed afternoons.
               </p>
-              <p className="text-gray-600 leading-relaxed">
-                Available for a limited time only. Advance reservations
-                recommended.
+              <p className="text-gray-600">
+                Available for a limited time. Advance reservations recommended.
               </p>
             </div>
           </section>
 
           {/* Offer 2 */}
-          <section className="grid md:grid-cols-2 gap-10 items-center">
+          <section
+            id="elegant"
+            className="grid md:grid-cols-2 gap-10 items-center"
+          >
             <div>
               <h2 className="text-3xl font-serif mb-4">
                 Elegant Weekday Dining
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Join us on weekdays between 12 pm and 3 pm and indulge in our
-                exclusive 3-course dining experience. Carefully curated dishes
-                that blend local and international flavors.
+                Enjoy a refined 3-course dining experience curated with local
+                and international flavors.
               </p>
-              <p className="text-gray-600 leading-relaxed">
-                Ideal for business lunches, anniversaries, or a refined dining
-                experience.
+              <p className="text-gray-600">
+                Ideal for business lunches and special moments.
               </p>
             </div>
             <img
@@ -75,7 +85,10 @@ export default function ReadMore() {
           </section>
 
           {/* Offer 3 */}
-          <section className="grid md:grid-cols-2 gap-10 items-center">
+          <section
+            id="promo"
+            className="grid md:grid-cols-2 gap-10 items-center"
+          >
             <img
               src="/images/offers.jpg"
               alt="Promotional Offer"
@@ -86,25 +99,23 @@ export default function ReadMore() {
                 Promotional Dining Deals
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Book your weekday table and treat yourself to our promotional
-                3-course dinner deal. Designed to offer maximum value without
-                compromising on quality.
+                Enjoy maximum value with our promotional weekday dining offers,
+                perfect for families and groups.
               </p>
-              <p className="text-gray-600 leading-relaxed">
-                Perfect for families, groups, and food lovers.
+              <p className="text-gray-600">
+                Great food, great value, great memories.
               </p>
             </div>
           </section>
-
         </div>
 
         {/* Back */}
         <div className="text-center mt-20">
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate(-1)}
             className="text-[#ff7a42] font-medium hover:underline"
           >
-            ← Back to Home
+            ← Back
           </button>
         </div>
       </div>

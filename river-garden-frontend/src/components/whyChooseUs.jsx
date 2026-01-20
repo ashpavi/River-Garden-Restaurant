@@ -31,6 +31,7 @@ const ImgCard = ({ src, alt }) => (
 );
 
 export default function WhyChooseUs() {
+  const navigate = useNavigate();
   return (
     <Container className="py-10">
       <div className="text-center mb-10">

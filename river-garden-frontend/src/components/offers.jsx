@@ -9,18 +9,16 @@ export default function Offers() {
       id="offers"
       className="py-16 pb-32 bg-[#ff8b5a] bg-opacity-80 relative overflow-hidden"
     >
-      {/* Background pattern overlay */}
+      {/* Background */}
       <div className="absolute inset-0 opacity-5 bg-[url('/images/offers.jpg')] bg-cover bg-center"></div>
 
       <Container>
         {/* Heading */}
         <div className="relative text-center mb-12">
           <p className="text-md tracking-widest text-gray-700">- OFFERS -</p>
-
           <h2 className="text-3xl md:text-4xl font-serif font-semibold mt-2">
             Special Offers and Discounts
           </h2>
-
           <p className="text-gray-600 mt-2 text-base md:text-lg">
             Delicious Delights for Everyone
           </p>
@@ -28,22 +26,22 @@ export default function Offers() {
 
         {/* Offer Cards */}
         <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-          {/* 1. Card */}
           <OfferCard
             title="Weekday Dinners 1+1=3"
-            description="Reserve your table at River Gardens on any weekday from 12 pm to 3 pm and enjoy a special-priced 3-course dinner crafted just for you."
+            description="Reserve your table on weekdays from 12 pm to 3 pm and enjoy a special-priced 3-course dinner."
+            target="weekday"
           />
 
-          {/* 2. Card */}
           <OfferCard
-            title="More Elegant"
-            description="Join us on weekdays between 12 pm and 3 pm and delight in our exclusive 3-course dinner offer — taste more, spend less!"
+            title="Elegant Weekday Dining"
+            description="Enjoy an exclusive 3-course weekday dining experience — refined taste, great value."
+            target="elegant"
           />
 
-          {/* 3. Card */}
           <OfferCard
-            title="More Promotional"
-            description="Book your weekday table from 12 pm to 3 pm and treat yourself to our discounted 3-course dinner deal at River Gardens!"
+            title="Promotional Dining Deals"
+            description="Book your weekday table and enjoy our promotional 3-course dinner deal."
+            target="promo"
           />
         </div>
       </Container>
@@ -51,8 +49,8 @@ export default function Offers() {
   );
 }
 
-/* SMALL OFFER CARD COMPONENT */
-function OfferCard({ title, description }) {
+/* OFFER CARD */
+function OfferCard({ title, description, target }) {
   const navigate = useNavigate();
 
   return (
@@ -83,8 +81,8 @@ function OfferCard({ title, description }) {
       <div className="mt-6 relative z-10">
         <Button
           type="outline"
-          className="w-full justify-center py-2 font-medium bg-white hover:bg-amber-500 rounded-full"
-          onClick={() => navigate("/offers-page")}
+          className="w-full justify-center py-2 font-medium bg-white hover:bg-amber-100 rounded-full"
+          onClick={() => navigate(`/offers-page#${target}`)}
         >
           Read More
         </Button>
@@ -92,4 +90,3 @@ function OfferCard({ title, description }) {
     </div>
   );
 }
-

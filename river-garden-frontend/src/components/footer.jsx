@@ -30,7 +30,7 @@ export default function RestaurantFooter() {
             <div className="h-0.5 w-16 bg-[#ff7a42] rounded mb-4" />
             <ul className="space-y-3 text-sm text-gray-700">
               <li><a href="#menu" className="hover:text-[#ff7a42] transition-colors">Menu</a></li>
-              <li><a href="#about" className="hover:text-[#ff7a42] transition-colors">About us</a></li>
+              <li><a href="#aboutUs" className="hover:text-[#ff7a42] transition-colors">About us</a></li>
               <li><a href="#offers" className="hover:text-[#ff7a42] transition-colors">Offers & Discounts</a></li>
               <li><a href="#space" className="hover:text-[#ff7a42] transition-colors">Space</a></li>
             </ul>
